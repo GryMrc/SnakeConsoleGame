@@ -35,12 +35,10 @@ namespace Snake
             Console.CursorVisible = false;
             ushort _beginAxis = 30;
             ushort _beginAyis = 20;
-            char headSymbol = '>';
-            string quequSymbol = "-";
             System.Timers.Timer timer = new(60);
             timer.Elapsed += Timer_Elapsed;
             timer.Enabled = true;
-            snake.Add(new Snake { symbol = headSymbol, direction = (int)DIRECTION.RIGHT, xPosition = _beginAxis, yPosition = _beginAyis });
+            snake.Add(new Snake { symbol = ' ', direction = (int)DIRECTION.RIGHT, xPosition = _beginAxis, yPosition = _beginAyis });
             while (true)
             {
                 if (!key)
@@ -48,7 +46,7 @@ namespace Snake
                     Console.BackgroundColor = ConsoleColor.White;
                     Console.ForegroundColor = ConsoleColor.Black;
                     Console.SetCursorPosition(_xMeal, _yMeal);
-                    Console.Write("\u263A");
+                    Console.Write(" ");
 
                     for (int i = 0; i < snake.Count; i++)
                     {
@@ -62,19 +60,15 @@ namespace Snake
                         {
                             case ConsoleKey.LeftArrow:
                                 snake[0].direction = (int)DIRECTION.LEFT;
-                                snake[0].symbol = '<';
                                 break;
                             case ConsoleKey.RightArrow:
                                 snake[0].direction = (int)DIRECTION.RIGHT;
-                                snake[0].symbol = '>';
                                 break;
                             case ConsoleKey.DownArrow:
                                 snake[0].direction = (int)DIRECTION.DOWN;
-                                snake[0].symbol = 'v';
                                 break;
                             case ConsoleKey.UpArrow:
                                 snake[0].direction = (int)DIRECTION.UP;
-                                snake[0].symbol = '^';
                                 break;
 
                         }
@@ -128,7 +122,7 @@ namespace Snake
                     _xMeal = random.Next(100) + 5;
                     _yMeal = random.Next(10) + 5;
                     var lastSnake = snake.Last();
-                    var newSnake = new Snake { direction = lastSnake.direction, symbol = '.' };
+                    var newSnake = new Snake { direction = lastSnake.direction, symbol = ' ' };
                     switch ((DIRECTION)lastSnake.direction)
                     {
                         case DIRECTION.RIGHT:

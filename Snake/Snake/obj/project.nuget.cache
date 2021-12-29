@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KJYrAOBfyXVbofCbjYedE5PMzp3PkKnuLI7f/1Qqe1gVRhQ8wFRW4CanwGTwWlBntWFcOFwONdtEm51nibvZhQ==",
+  "dgSpecHash": "BQvikPT3jLjTN3/+YGemvKXB9/WnYPZeje23WHAS7ehzpUg2erUxhDzMvPvaR0707w7yxPSsKC9fJ7nc/m2/XQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gmeric\\source\\repos\\Snake\\Snake\\Snake.csproj",
+  "projectFilePath": "C:\\Users\\gmeric\\source\\repos\\SnakeConsoleGame\\Snake\\Snake\\Snake.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
